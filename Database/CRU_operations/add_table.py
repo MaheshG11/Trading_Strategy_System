@@ -5,10 +5,11 @@ import os
 
 
 # Database connection details (replace with your own)
-password = os.getenv("password")
+password = password = '_Enter_your_password_here_1'
 db_name = "StocksData"
 user = "root"
 host = "localhost"
+port=30066
 
 def add_columns(cursor : mysql.connector.cursor_cext.CMySQLCursor,attributes:list,datatypes:list,tablename:str):
     
@@ -18,13 +19,18 @@ def add_columns(cursor : mysql.connector.cursor_cext.CMySQLCursor,attributes:lis
         f"ADD {attributes[i].lower()} {d}  DEFAULT {'' if datatypes[i]==str else 0};")
         cursor.execute(query)
         
-def insert_data_from_csv(db_name, user, password, host, csv_file_path, ticker,companyName):
+def insert_data_from_csv(db_name, user, password, host, csv_file_path, ticker,companyName,port : int):
   t1="StockPrice"
   t2="Stocks"
   try:
     # Connect to the MySQL database
     connection = mysql.connector.connect(
-        database=db_name, user=user, password=password, host=host,auth_plugin='mysql_native_password'
+        database=db_name,
+        user=user,
+        password=password,
+        host=host,
+        port=port,
+        auth_plugin='mysql_native_password',
     )
 
     # Create a cursor object
@@ -125,5 +131,5 @@ if __name__=="__main__":
     csv_file_path = input("Enter CSV file path\n" )
     ticker=input("Enter Ticker Name\n")
     companyName= input("Enter Company Name\n")
-    insert_data_from_csv(db_name, user, password, host, csv_file_path,ticker,companyName)
+    insert_data_from_csv(db_name, user, password, host, csv_file_path,ticker,companyName,port)
     

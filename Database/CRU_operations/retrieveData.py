@@ -3,7 +3,7 @@ import mysql.connector
 import os
 
 # Database connection details (replace with your own)
-password = os.getenv("password")
+password = '_Enter_your_password_here_1'
 db_name = "StocksData"
 user = "root"
 host = "localhost"
