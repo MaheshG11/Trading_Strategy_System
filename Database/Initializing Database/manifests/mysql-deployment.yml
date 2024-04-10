@@ -34,7 +34,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: mysql-service
+  name: mysqlservice
 spec:
   ports:
     - port: 3306
@@ -42,3 +42,5 @@ spec:
   selector:
     app: mysql
   clusterIP: None
+
+---

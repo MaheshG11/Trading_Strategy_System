@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: my-app-container
-        image: maheshg11/pyth_cru:v1.0
+        image: maheshg11/py_cru
         ports:
         - containerPort: 8080

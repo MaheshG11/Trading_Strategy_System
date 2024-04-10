@@ -3,24 +3,17 @@ kind: PersistentVolume
 metadata:
   name: mysql-pv
   labels:
-    type: local
+    type: hosyPath
 spec:
   storageClassName: standard
   capacity:
-    storage: 1Gi
+    storage: 2Gi
   volumeMode: Filesystem
   accessModes:
     - ReadWriteOnce
-  local:
+  hostPath:
     path: "/home/mahesh/Temp/vol"
-  nodeAffinity:
-    required:
-      nodeSelectorTerms:
-        - matchExpressions:
-            - key: kubernetes.io/hostname
-              operator: In
-              values:
-                - minikube
+
 
 ---
 

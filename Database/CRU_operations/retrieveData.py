@@ -6,7 +6,7 @@ import os
 password = '_Enter_your_password_here_1'
 db_name = "StocksData"
 user = "root"
-host = "localhost"
+host = "mysqlservice:3306"
 if __name__=='__main__':
     connection = mysql.connector.connect(
         database=db_name, user=user, password=password, host=host,auth_plugin='mysql_native_password'

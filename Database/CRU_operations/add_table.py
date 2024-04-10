@@ -8,8 +8,8 @@ import os
 password = password = '_Enter_your_password_here_1'
 db_name = "StocksData"
 user = "root"
-host = "localhost"
-port=30066
+host = "mysqlservice"
+port=3306
 
 def add_columns(cursor : mysql.connector.cursor_cext.CMySQLCursor,attributes:list,datatypes:list,tablename:str):
     
