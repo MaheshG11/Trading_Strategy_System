@@ -9,6 +9,8 @@ charset-normalizer==3.3.2
 decorator==5.1.1
 defusedxml==0.7.1
 Django==5.0.4
+djangorestframework==3.15.1
+dnspython==2.6.1
 docopt==0.6.2
 executing==2.0.1
 fastjsonschema==2.19.1
@@ -38,7 +40,9 @@ prompt-toolkit==3.0.43
 ptyprocess==0.7.0
 pure-eval==0.2.2
 Pygments==2.17.2
+pymongo==4.6.3
 python-dateutil==2.9.0.post0
+python-dotenv==1.0.1
 pyzmq==25.1.2
 referencing==0.34.0
 requests==2.31.0
