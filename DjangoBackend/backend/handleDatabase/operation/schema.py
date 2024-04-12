@@ -13,18 +13,22 @@ trade={
         order   
     ]
 }
+
 money={
         "allotedFunds":int,
         "currency":str,
     }
-schema={
+usersSchema={
     "username":str,
     "name": str,
     "password": str,
     "email":str,
     #"role": str,
     "netProfits":[money],
-    "funds":[money],
+    "funds":[money],  
+}
+portfolioSchema={
+    "_id": str,
     "portfolio":
         [
         portfolioEntity
@@ -33,6 +37,4 @@ schema={
         [
             trade
         ]
-    
-        
 }

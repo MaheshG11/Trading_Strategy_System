@@ -19,11 +19,11 @@ from django.urls import path
 import handleRequests.userRequests
 from handleRequests.userRequests.forms.signUpView import signUp_view
 import handleRequests
-import handleRequests.userRequests.homeView  
+import DjangoFrontend.frontend.frontend.home.homeView  
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('signUp/', signUp_view,name='signUp_view'),
-    path('',handleRequests.userRequests.homeView.form_view),
+    path('',DjangoFrontend.frontend.frontend.home.homeView.form_view),
     #path('login/')
 
 ]

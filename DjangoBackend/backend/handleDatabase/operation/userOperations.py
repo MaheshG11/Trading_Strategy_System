@@ -1,16 +1,21 @@
 import pymongo  # type: ignore
+from middlewares.userAuth import userAuth
 class userOperation:
     def __init__(self,db:pymongo.collection.Collection):
         self.users=db
+        self.authMiddlewares=userAuth(db)
+        
+        
     def signUp(self,name:str,password:str,email:str,username:str):
         users=self.users
         print("at")
         if(users.find_one({"username":username})!= None):
-            return {"success":0,"message":("User with username alredy exists")}
+            return {"status":401,"message":("User with username alredy exists")}
         elif(users.find_one({"email":email})!= None):
-            return {"success":0,"message":"User with this email already exists"}
+            return {"status":401,"message":"User with this email already exists"}
         else:
             try:
+                password=self.authMiddlewares.passcrypt(password)
                 users.insert_one({
                     "username":username,
                     "name":name,
@@ -25,7 +30,20 @@ class userOperation:
                         "currency":"Rs",
                     }],
                 })
-                return {"success":1,"message":"User Created"}
+                return {"status":200,"message":"User Created"}
             except:
-                return {"success":0,"message":"Please try again"}
-            
+                return {"status":401,"message":"Please try again"}
+    def login(self,email:str,password:str):
+        try:
+            user=self.users.find_one({'email':email})
+            password=self.authMiddlewares.passcrypt(password)
+            if(user['password']==password):
+                print(user)
+                return {"name":user["name"],"email":user["email"],"status": 200, "message":"login successful"}
+            else :
+                return {"status":401,"message":"Incorrect Password. Try Again."}
+        except: 
+            return {"status": 500, "message":"Unknow Error Caught"}
+        
+        
+        

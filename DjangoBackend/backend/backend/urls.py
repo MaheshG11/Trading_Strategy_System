@@ -21,6 +21,6 @@ import handleDatabase.operations
 
 urlpatterns = [ 
     path('admin/', admin.site.urls), 
-    
+    path('login/',handleDatabase.operations.login),
     path('signUp/',handleDatabase.operations.signUp)
 ]

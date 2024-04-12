@@ -16,9 +16,11 @@ userdb=my_client["users"]
 userscollection=userdb["users"]
 print(type(userscollection))
 ops=userOperation(db=userscollection)
+
+
+
 @api_view(['POST'])
 def signUp(request):
-  
   username=request.data['username']
   name=request.data['name']
   password=request.data['password']
@@ -27,6 +29,23 @@ def signUp(request):
     data=ops.signUp(username=username,name=name,email=email,password=password)
   except:
     print('the except condition')
-  print('l')
-  print(data)
+ 
   return Response(data)
+
+
+@api_view(["GET"])
+def login(request):
+  if(request.method=='GET'):
+    password=request.data['password']
+    email=request.data['email']
+    try:
+      data=ops.login(email=email,password=password)
+    except:
+      print('the except condition')
+    try:
+          return Response(data)
+    except Exception as e:
+          # Handle the exception
+          print(f"An error occurred: {e}")
+          return Response({"error": str(e)}, status=500) 
+
