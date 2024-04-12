@@ -43,9 +43,9 @@ def login(request):
     except:
       print('the except condition')
     try:
-          return Response(data)
+          return Response(data,content_type="application/json")
     except Exception as e:
           # Handle the exception
           print(f"An error occurred: {e}")
-          return Response({"error": str(e)}, status=500) 
+          return Response({"error": str(e)}, status=500,content_type="application/json") 
 

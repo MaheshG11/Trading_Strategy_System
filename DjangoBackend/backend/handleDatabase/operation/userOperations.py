@@ -38,12 +38,13 @@ class userOperation:
             user=self.users.find_one({'email':email})
             password=self.authMiddlewares.passcrypt(password)
             if(user['password']==password):
-                print(user)
-                return {"name":user["name"],"email":user["email"],"status": 200, "message":"login successful"}
+                token_JWT=self.authMiddlewares.genJWT(username=user["username"],_id=str(user["_id"]))
+                
+                return {"name":user["name"],"email":user["email"],"JWT": token_JWT,"status": 200, "message":"login successful"}
             else :
                 return {"status":401,"message":"Incorrect Password. Try Again."}
-        except: 
-            return {"status": 500, "message":"Unknow Error Caught"}
+        except Exception as e: 
+            return e
         
         
         
