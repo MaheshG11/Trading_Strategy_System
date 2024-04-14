@@ -169,11 +169,17 @@ If you have a suggestion that would make this better, please fork the repo and c
 Don't forget to give the project a star! Thanks again!
 
 1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+2. In a seperate empty clone forked the repo(`git clone git@github.com:<YOUR-USERNAME>/OpenDevin.git`)
+3. Set the official repository as your upstream to synchronize with the latest update in the this repository. Add the original repository as upstream (`cd Trading_strategy_System
+git remote add upstream git@github.com:MaheshG11/Trading_Strategy_System.git`)
+4. Synchronize latest commit with this repository before coding (`git fetch upstream`)
+6. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+7. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+8. Push to the Branch (`git push origin feature/AmazingFeature`)
+9. Open a Pull Request
 
+other commands you might need
+1) To keep up with the project updates (`git rebase`)
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
