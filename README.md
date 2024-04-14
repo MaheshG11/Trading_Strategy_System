@@ -29,7 +29,7 @@
 
 <!-- PROJECT LOGO -->
 <br />
-<b><h2>Status : In Progress</h2></b>
+<b><h2>Status of this project : In Progress</h2></b>
 <div align="center">
 <!--  <a href="https://github.com/MaheshG11/Trading_Strategy_System">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
@@ -228,7 +228,7 @@ Project Link: [https://github.com/MaheshG11/Trading_Strategy_System](https://git
 [license-shield]: https://img.shields.io/github/license/MaheshG11/Trading_Strategy_System.svg?style=for-the-badge
 [license-url]: https://github.com/MaheshG11/Trading_Strategy_System/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/linkedin_username
+[linkedin-url]: https://linkedin.com/in/mahesh-ghumare-37894a200
 [product-screenshot]: images/screenshot.png
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
