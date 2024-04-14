@@ -29,20 +29,21 @@
 
 <!-- PROJECT LOGO -->
 <br />
+<h4>Status : Ongoing</h4>
 <div align="center">
-  <a href="https://github.com/MaheshG11/Trading_Strategy_System">
+<!--  <a href="https://github.com/MaheshG11/Trading_Strategy_System">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a>
+  </a> -->
 
-<h3 align="center">project_title</h3>
+<h3 align="center">Trading Strategy System</h3>
 
   <p align="center">
-    project_description
+    A Platform to perfrom automated trades. 
     <br />
     <a href="https://github.com/MaheshG11/Trading_Strategy_System"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/MaheshG11/Trading_Strategy_System">View Demo</a>
+ <!--   <a href="https://github.com/MaheshG11/Trading_Strategy_System">View Demo</a> -->
     ·
     <a href="https://github.com/MaheshG11/Trading_Strategy_System/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
     ·
@@ -63,18 +64,18 @@
       </ul>
     </li>
     <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
+     <a href="#getting-started">Getting Started</a>
+     <!--  <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#installation">Installation</a></li>
-      </ul>
+      </ul>-->
     </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
+ <!--    <li><a href="#usage">Usage</a></li>
+    <li><a href="#roadmap">Roadmap</a></li>-->
     <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
+  <!--  <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
+    <li><a href="#acknowledgments">Acknowledgments</a></li>-->
   </ol>
 </details>
 
@@ -83,9 +84,9 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+<!--[![Product Name Screen Shot][product-screenshot]](https://example.com)-->
 
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
+This project aims to depict the industry level software which is used to place automated trades for a mid-frequency trading firms who uses Python codes to define the rules of trades (trading strategies).<b> This project is only being built for developers involved so they can contribute to this project and improve their skills. DO NOT USE IT FOR TRADING STOCKS</b> 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -93,14 +94,8 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 
 ### Built With
 
-* [![Next][Next.js]][Next-url]
-* [![React][React.js]][React-url]
-* [![Vue][Vue.js]][Vue-url]
-* [![Angular][Angular.io]][Angular-url]
-* [![Svelte][Svelte.dev]][Svelte-url]
-* [![Laravel][Laravel.com]][Laravel-url]
-* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![JQuery][JQuery.com]][JQuery-url]
+* [![Docker][Docker]][Docker-url]
+* [![Django][Django]][Django-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -109,9 +104,8 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
-
+This application uses multiple technologies for multiple stages. If you want to contribute to a certain part of this project go to that directory and their you will find readme with the setup instructions.
+<!--
 ### Prerequisites
 
 This is an example of how to list things you need to use the software and how to install them.
@@ -141,6 +135,7 @@ This is an example of how to list things you need to use the software and how to
 
 
 <!-- USAGE EXAMPLES -->
+<!--
 ## Usage
 
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
@@ -149,7 +144,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
+-->
 
 <!-- ROADMAP -->
 ## Roadmap
@@ -184,16 +179,16 @@ Don't forget to give the project a star! Thanks again!
 
 
 <!-- LICENSE -->
-## License
+<!--## License
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
+ -->
 
 
 <!-- CONTACT -->
-## Contact
+<!--## Contact
 
 Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
 
@@ -202,16 +197,16 @@ Project Link: [https://github.com/MaheshG11/Trading_Strategy_System](https://git
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-
+ -->
 <!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
+<!--## Acknowledgments
 
 * []()
 * []()
 * []()
-
+-->
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
+ -->
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
@@ -231,6 +226,11 @@ Project Link: [https://github.com/MaheshG11/Trading_Strategy_System](https://git
 [product-screenshot]: images/screenshot.png
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
+[Django]:https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=green
+[Django-url]:https://www.djangoproject.com/
+[Docker]:https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white
+[Docker-url]:https://www.docker.com/
+
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
 [Vue.js]: https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D
