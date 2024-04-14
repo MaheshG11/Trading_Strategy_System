@@ -104,7 +104,7 @@ This project aims to depict the industry level software which is used to place a
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This application uses multiple technologies for multiple stages. If you want to contribute to a certain part of this project go to that directory and their you will find readme with the setup instructions.
+Follow the below installations to setup.
 <!--
 ### Prerequisites
 
@@ -112,23 +112,26 @@ This is an example of how to list things you need to use the software and how to
 * npm
   ```sh
   npm install npm@latest -g
-  ```
+  ```-->
 
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/MaheshG11/Trading_Strategy_System.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
+1. Fork the Project
+2. In a seperate empty clone forked the repo
+    ```sh
+    git clone git@github.com:<YOUR-USERNAME>/OpenDevin.git
+    ```
+3. Set the official repository as your upstream to synchronize with the latest update in the this repository. Add the original repository as upstream 
+    ```sh
+    cd Trading_strategy_System
+    git remote add upstream git@github.com:MaheshG11/Trading_Strategy_System.git`)
+    ```
+4. Synchronize latest commit with this repository before coding 
+    ```sh
+    git fetch upstream
+    ```
+5. This application uses multiple technologies for multiple stages. If you want to contribute to a certain part of this project go to that directory and their you will find readme with the setup instructions.
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -168,15 +171,11 @@ Contributions are what make the open source community such an amazing place to l
 If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
 Don't forget to give the project a star! Thanks again!
 
-1. Fork the Project
-2. In a seperate empty clone forked the repo(`git clone git@github.com:<YOUR-USERNAME>/OpenDevin.git`)
-3. Set the official repository as your upstream to synchronize with the latest update in the this repository. Add the original repository as upstream (`cd Trading_strategy_System
-git remote add upstream git@github.com:MaheshG11/Trading_Strategy_System.git`)
-4. Synchronize latest commit with this repository before coding (`git fetch upstream`)
-6. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-7. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-8. Push to the Branch (`git push origin feature/AmazingFeature`)
-9. Open a Pull Request
+
+1. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+2. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+3. Push to the Branch (`git push origin feature/AmazingFeature`)
+4. Open a Pull Request
 
 other commands you might need
 1) To keep up with the project updates (`git rebase`)
