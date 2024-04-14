@@ -224,7 +224,7 @@ Project Link: [https://github.com/MaheshG11/Trading_Strategy_System](https://git
 [issues-shield]: https://img.shields.io/github/issues/MaheshG11/Trading_Strategy_System.svg?style=for-the-badge
 [issues-url]: https://github.com/MaheshG11/Trading_Strategy_System/issues
 [license-shield]: https://img.shields.io/github/license/MaheshG11/Trading_Strategy_System.svg?style=for-the-badge
-[license-url]: https://github.com/MaheshG11/Trading_Strategy_System/LICENSE
+[license-url]: https://github.com/MaheshG11/Trading_Strategy_System/blob/Main/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/mahesh-ghumare-37894a200
 [product-screenshot]: images/screenshot.png
