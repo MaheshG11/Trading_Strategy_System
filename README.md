@@ -71,8 +71,8 @@
  <!--    <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>-->
     <li><a href="#contributing">Contributing</a></li>
-  <!--  <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="#license">License</a></li>
+  <!--  <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>-->
   </ol>
 </details>
@@ -184,25 +184,25 @@ other commands you might need
 
 
 <!-- LICENSE -->
-<!--## License
+## License
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
- -->
+ 
 
 
 <!-- CONTACT -->
-<!--## Contact
+## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
+Mahesh Ghumare  - Mahesh Madankumar Ghumare
 
 Project Link: [https://github.com/MaheshG11/Trading_Strategy_System](https://github.com/MaheshG11/Trading_Strategy_System)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
- -->
+
 <!-- ACKNOWLEDGMENTS -->
 <!--## Acknowledgments
 
@@ -224,7 +224,7 @@ Project Link: [https://github.com/MaheshG11/Trading_Strategy_System](https://git
 [issues-shield]: https://img.shields.io/github/issues/MaheshG11/Trading_Strategy_System.svg?style=for-the-badge
 [issues-url]: https://github.com/MaheshG11/Trading_Strategy_System/issues
 [license-shield]: https://img.shields.io/github/license/MaheshG11/Trading_Strategy_System.svg?style=for-the-badge
-[license-url]: https://github.com/MaheshG11/Trading_Strategy_System/blob/master/LICENSE.txt
+[license-url]: https://github.com/MaheshG11/Trading_Strategy_System/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/mahesh-ghumare-37894a200
 [product-screenshot]: images/screenshot.png
