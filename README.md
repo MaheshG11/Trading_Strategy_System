@@ -119,7 +119,7 @@ This is an example of how to list things you need to use the software and how to
 1. Fork the Project
 2. In a seperate empty clone forked the repo
     ```sh
-    git clone git@github.com:<YOUR-USERNAME>/OpenDevin.git
+    git clone git@github.com:<YOUR-USERNAME>/Trading_Strategy_System.git
     ```
 3. Set the official repository as your upstream to synchronize with the latest update in the this repository. Add the original repository as upstream 
     ```sh
@@ -211,7 +211,6 @@ Project Link: [https://github.com/MaheshG11/Trading_Strategy_System](https://git
 * []()
 -->
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
- -->
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
