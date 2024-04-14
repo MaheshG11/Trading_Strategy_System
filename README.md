@@ -152,10 +152,12 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-    - [ ] Nested Feature
+- [ ] CRUD Accounts
+- [ ] Create a page with users' performance 
+- [ ] Create a page to submit the python
+- [ ] Create a page for performance reports of the strategy
+- [ ] Create Histroy of Submiited Codes from here user will be able to see the performance reports for their designed strategies.
+- [ ] Create a page for a user to define a basket of stocks.
 
 See the [open issues](https://github.com/MaheshG11/Trading_Strategy_System/issues) for a full list of proposed features (and known issues).
 
