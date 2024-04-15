@@ -122,7 +122,7 @@ This is an example of how to list things you need to use the software and how to
 3. Set the official repository as your upstream to synchronize with the latest update in the this repository. Add the original repository as upstream 
     ```sh
     cd Trading_strategy_System
-    git remote add upstream git@github.com:MaheshG11/Trading_Strategy_System.git`)
+    git remote add upstream git@github.com:MaheshG11/Trading_Strategy_System.git
     ```
 4. Synchronize latest commit with this repository before coding 
     ```sh
@@ -152,7 +152,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 - [ ] CRUD Accounts
 - [ ] Create a page with users' performance 
-- [ ] Create a page to submit the python
+- [ ] Create a page to submit the python code
 - [ ] Create a page for performance reports of the strategy
 - [ ] Create Histroy of Submiited Codes from here user will be able to see the performance reports for their designed strategies.
 - [ ] Create a page for a user to define a basket of stocks.
