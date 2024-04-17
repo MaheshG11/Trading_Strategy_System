@@ -36,7 +36,7 @@
 <h3 align="center">Trading Strategy System</h3>
 
   <p align="center">
-    A Platform to perform automated trades. 
+    A Platform to simulate automated trades. 
     <br />
     <a href="https://github.com/MaheshG11/Trading_Strategy_System"><strong>Explore the docs »</strong></a>
     <br />
