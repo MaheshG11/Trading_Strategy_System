@@ -72,8 +72,8 @@
     <li><a href="#roadmap">Roadmap</a></li>-->
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
-  <!--  <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>-->
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
 
@@ -195,7 +195,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Mahesh Ghumare  - Mahesh Madankumar Ghumare
+Mahesh Ghumare [Email](maheshghumareofficial@gmial.com)
 
 Project Link: [https://github.com/MaheshG11/Trading_Strategy_System](https://github.com/MaheshG11/Trading_Strategy_System)
 
@@ -204,12 +204,12 @@ Project Link: [https://github.com/MaheshG11/Trading_Strategy_System](https://git
 
 
 <!-- ACKNOWLEDGMENTS -->
-<!--## Acknowledgments
+## Acknowledgments
 
+* [Othneil Drew](https://github.com/othneildrew/Best-README-Template) for the ReadMe Template file
 * []()
 * []()
-* []()
--->
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
