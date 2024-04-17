@@ -195,7 +195,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Mahesh Ghumare [Email](maheshghumareofficial@gmial.com)
+Mahesh Ghumare [LinkedIn](https://www.linkedin.com/in/mahesh-ghumare-37894a200/)
 
 Project Link: [https://github.com/MaheshG11/Trading_Strategy_System](https://github.com/MaheshG11/Trading_Strategy_System)
 
