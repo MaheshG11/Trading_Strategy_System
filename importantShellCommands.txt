@@ -1,7 +1,14 @@
+ Python Virtual Env COMMANDS 
  pip3 freeze > requirements.txt
  source venv/bin/activate
+ python3 -m venv venv
+ 
+ 
+ GIT COMMANDS
  git branch settingUp/backend   {create a new branch}
  git merge Main {merge Main branch into the current branch}
  git checkout Main {switch to Main branch}
  git branch -d <branch_name> {Delete a branch}
+
+
  python manage.py runserver
