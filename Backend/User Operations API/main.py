@@ -36,4 +36,4 @@ async def login(data:loginDetails):
       print('the except condition')
     return "some message"
 if __name__ == "__main__":
-    uvicorn.run(app, host="127.0.0.1", port=8081)
+    uvicorn.run(app, host=os.getenv("UserOperationsApiHost"), port=int(os.getenv("UserOperationsApiPort")))
