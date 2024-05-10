@@ -9,7 +9,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 #SETUP CONFIGURATION
 app = FastAPI()
-origins = ["http://localhost:3000"] 
+origins = [f'http://{os.getenv("frontendHost")}:{os.getenv("frontendPort")}'] 
 app.add_middleware(
     CORSMiddleware, allow_origins=origins, allow_credentials=False, allow_methods=["*"], allow_headers=["*"]
 )
@@ -26,10 +26,8 @@ async def signup(data:signUpDetails):
     
     try:
         data= await userOperation.signUp(userscollection=userscollection,username=data.username,name=data.name,email=data.email,password=data.password)
-        
     except Exception as e:
         print(e)
- 
     return {"message":data}
     
     
