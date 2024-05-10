@@ -9,11 +9,3 @@
  git merge Main {merge Main branch into the current branch}
  git checkout Main {switch to Main branch}
  git branch -d <branch_name> {Delete a branch}
-
-
- python manage.py runserver
-
- POSTGRESQL
- sudo -u postgres psql
- systemctl restart postgresql
- \password postgres  {#set password of user postgres}
