@@ -1,49 +1,37 @@
-import pymongo  # type: ignore
+
 from middlewares.userAuth import userAuth
+import pymongo
 class userOperation:
-    def __init__(self,db:pymongo.collection.Collection):
-        self.users=db
-        self.authMiddlewares=userAuth(db)
+    async def signUp(userscollection:pymongo.collection.Collection,name:str,password:str,email:str,username:str):
         
-        
-    def signUp(self,name:str,password:str,email:str,username:str):
-        users=self.users
-        if(users.find_one({"username":username})!= None):
-            return {"status":401,"message":("User with username alredy exists")}
-        elif(users.find_one({"email":email})!= None):
-            return {"status":401,"message":"User with this email already exists"}
+        f=(userscollection.find_one({"username":username}) or userscollection.find_one({"email":email}))!= None #flag
+        if(f):
+            return {"status":401,"message":("User with username or alredy exists")}
         else:
             try:
-                password=self.authMiddlewares.passcrypt(password)
-                users.insert_one({
+                password=userAuth.passcrypt(password)
+                userscollection.insert_one({
                     "username":username,
                     "name":name,
                     "password":password,
                     "email":email,
-                    "netProfits":[{
-                        "allotedFunds":0,
-                        "currency":"Rs",
-                    }],
-                    "funds":[{
-                        "allotedFunds":0,
-                        "currency":"Rs",
-                    }],
                 })
                 return {"status":200,"message":"User Created"}
             except:
                 return {"status":401,"message":"Please try again"}
-    def login(self,email:str,password:str):
+    async def login(userscollection:pymongo.collection.Collection,email:str,password:str):
         try:
-            user=self.users.find_one({'email':email})
-            password=self.authMiddlewares.passcrypt(password)
+            user=userscollection.find_one({'email':email})
+            password=userAuth.passcrypt(password=password)
             if(user['password']==password):
-                token_JWT=self.authMiddlewares.genJWT(username=user["username"],_id=str(user["_id"]))
+                token_JWT=userAuth.genJWT(username=user["username"],_id=str(user["_id"]))
                 
                 return {"name":user["name"],"email":user["email"],"JWT": token_JWT,"status": 200, "message":"login successful"}
             else :
                 return {"status":401,"message":"Incorrect Password. Try Again."}
         except Exception as e: 
-            return e
+            print(e)
+            return {"there was an unexpected error"}
         
         
         

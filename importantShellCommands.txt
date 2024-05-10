@@ -12,3 +12,8 @@
 
 
  python manage.py runserver
+
+ POSTGRESQL
+ sudo -u postgres psql
+ systemctl restart postgresql
+ \password postgres  {#set password of user postgres}

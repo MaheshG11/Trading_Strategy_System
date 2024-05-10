@@ -1,5 +1,4 @@
-<h4><b>Note:</b>We are going to use postgre, postgre with timescale extension and mongodb. Since we have not yet setup postgre or timescale we are currently using mongodb for storing user details so for development purposes you only have to follow the following installations. <b>WE WILL SOON BE USING POSTGRE FOR USER OPERATIONS</b></h4>
-<h2>Instructions to setup virtual environment</h2><br>
+<h4><b>Note:</b>We are going to use  mongodb. details so for development purposes you only have to follow the following installations.</h4>
 
 <h2>Follow these steps</h2><br><br>
 
