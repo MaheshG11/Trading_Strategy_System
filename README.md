@@ -91,9 +91,11 @@ This project aims to depict the industry level software which is used to place a
 
 
 ### Built With
-
+* [![React.js][React.js]][React-url]
 * [![Docker][Docker]][Docker-url]
-* [![Django][Django]][Django-url]
+* [![FastAPI][FastAPI]][FastAPI-url]
+* [![MongoDB][MongoDB]][MongoDB-url]
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -234,6 +236,10 @@ Project Link: [https://github.com/MaheshG11/Trading_Strategy_System](https://git
 [Django-url]:https://www.djangoproject.com/
 [Docker]:https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white
 [Docker-url]:https://www.docker.com/
+[FastAPI]:https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi
+[FastAPI-url]:https://fastapi.tiangolo.com/
+[MongoDB]:https://img.shields.io/badge/-MongoDB-13aa52?style=for-the-badge&logo=mongodb&logoColor=white
+[MongoDB-url]:https://www.mongodb.com/
 
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
