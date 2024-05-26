@@ -31,15 +31,15 @@
 <div align="center">
   <a href="https://github.com/MaheshG11/Trading_Strategy_System">
     <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="images/FL1D.png">
-  <source media="(prefers-color-scheme: light)" srcset="images/FL1L.png">
-  <img alt="Shows an illustrated sun in light mode and a moon with stars in dark mode." src="images/FL1D.png">
+  <source media="(prefers-color-scheme: dark)" srcset="images/FL1D.png" height=200 width=500>
+  <source media="(prefers-color-scheme: light)" srcset="images/FL1L.png" height=200 width=500>
+  <img alt="<h1>Trading Strategy System</h1>" src="images/FL1D.png"  height=200 width=500>
 </picture>
       
   </a> 
 
 <!--<h3 align="center">Trading Strategy System</h3>-->
-<h1 align="center">A Platform to simulate automated trades. </h1>
+<h2 align="center">A Platform to simulate automated trades. </h2>
   <p align="center">
     <br />
     <a href="https://github.com/MaheshG11/Trading_Strategy_System"><strong>Explore the docs »</strong></a>
