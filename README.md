@@ -29,14 +29,18 @@
 <br />
 <b><h2>Status of this project : In Progress</h2></b>
 <div align="center">
-<!--  <a href="https://github.com/MaheshG11/Trading_Strategy_System">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a> -->
+  <a href="https://github.com/MaheshG11/Trading_Strategy_System">
+    <picture>
+  <source media="(prefers-color-scheme: dark)" srcset="images/FL1D.png">
+  <source media="(prefers-color-scheme: light)" srcset="images/FL1L.png">
+  <img alt="Shows an illustrated sun in light mode and a moon with stars in dark mode." src="images/FL1D.png">
+</picture>
+      
+  </a> 
 
-<h3 align="center">Trading Strategy System</h3>
-
+<!--<h3 align="center">Trading Strategy System</h3>-->
+<h1 align="center">A Platform to simulate automated trades. </h1>
   <p align="center">
-    A Platform to simulate automated trades. 
     <br />
     <a href="https://github.com/MaheshG11/Trading_Strategy_System"><strong>Explore the docs »</strong></a>
     <br />
@@ -95,6 +99,7 @@ This project aims to depict the industry level software which is used to place a
 * [![Docker][Docker]][Docker-url]
 * [![FastAPI][FastAPI]][FastAPI-url]
 * [![MongoDB][MongoDB]][MongoDB-url]
+* [![Postgres][Postgres]][Postgres-url]
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -240,7 +245,8 @@ Project Link: [https://github.com/MaheshG11/Trading_Strategy_System](https://git
 [FastAPI-url]:https://fastapi.tiangolo.com/
 [MongoDB]:https://img.shields.io/badge/-MongoDB-13aa52?style=for-the-badge&logo=mongodb&logoColor=white
 [MongoDB-url]:https://www.mongodb.com/
-
+[Postgres]:https://img.shields.io/badge/postgresql-4169e1?style=for-the-badge&logo=postgresql&logoColor=white
+[Postgres-url]:https://www.postgresql.org/
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
 [Vue.js]: https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D
