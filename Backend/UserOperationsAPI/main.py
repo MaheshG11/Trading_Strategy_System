@@ -39,7 +39,7 @@ async def signup(data: signUpDetails):
             password=data.password,
         )
     except Exception as e:
-        print(e)
+        return {"error": e}
     return {"message": data}
 
 
@@ -49,8 +49,8 @@ async def login(data: loginDetails):
         data = await userOperation.login(
             userscollection=userscollection, email=data.email, password=data.password
         )
-    except:
-        print("the except condition")
+    except Exception as e:
+        return {"error": e}
     return data
 
 

@@ -187,6 +187,7 @@ class initializeDatabase:
     def createStockTable(self, symbol: str, db: psycopg2.extensions.connection):
 
         query = f"""CREATE TABLE {symbol}(
+            id SERIAL PRIMARY KEY,
             date TIMESTAMPTZ NOT NULL UNIQUE,
             open NUMERIC(16,4),
             high NUMERIC(16,4),
@@ -237,7 +238,12 @@ class initializeDatabase:
         info = stock.info
         print(info)
         exchange = info[self.l[0]]
-        if not self.insertDataMasterTable(exchange, info[self.l[1]]):
+
+        if self.l[1] in info:
+            temp = info[self.l[1]]
+        else:
+            temp = "NULL"
+        if not self.insertDataMasterTable(exchange, temp):
             return False
         exchange = "_".join(exchange.split("."))
         exchange = exchange.lower()
@@ -270,17 +276,27 @@ class initializeDatabase:
                 WHERE symbol='{symbol}';"""
             )
         except:
-            False
+            pass
         try:
             cur.execute(query)
 
         except Exception as e:
             print(e)
             return False
-        history = stock.history()
+        history = stock.history(interval="1d", period="max")
         n = len(history)
+
         i = 0
         m = 7
+        if n == 0:
+            try:
+                cur.execute(
+                    f"""DELETE FROM {exchange}
+                    WHERE symbol='{symbol}';"""
+                )
+            except:
+                return "Invalid Stock"
+
         symbol = "_".join(symbol.split("."))
         db: psycopg2.extensions.connection
         try:
@@ -298,7 +314,7 @@ class initializeDatabase:
         while i < n:
             k = history.iloc[i]
 
-            _ = "('" + str(k.name) + "'"
+            _ = "(DEFAULT,'" + str(k.name) + "'"
             j = 0
             while j < m:
                 _ += "," + str(k.iloc[j])
@@ -306,9 +322,10 @@ class initializeDatabase:
             _ += "),\n"
             query += _
             i += 1
-        query = query[:-2] + ";"
+        query = query[:-2] + " ON CONFLICT DO NOTHING;"
         cur = db.cursor()
         cur.execute(query)
+        print("done")
         return True
 
     def insertMultipleStocks(self, symbols: list[str]):
@@ -316,16 +333,18 @@ class initializeDatabase:
             self.insertDataMasterStockTable(i)
 
 
-def inizialize(port: int):
-    l = []
-    st = initializeDatabase(port)
-    with open("listOfStocks", "r") as f:
-        while True:
-            a = f.readline()
-            if len(a) == 0:
-                break
-            l.append(a[0:-1])
-    st.insertMultipleStocks(l)
+if __name__ == "__main__":
+    a = initializeDatabase(5432)
+    a.insertDataMasterStockTable("JPPOWER.BO", 5432)
+    # def inizialize(port: int):
+    #     l = []
+    #     st = initializeDatabase(port)
+    #     with open("listOfStocks", "r") as f:
+    #         while True:
+    #             a = f.readline()
+    #             if len(a) == 0:
+    #                 break
+    #             l.append(a[0:-1])
+    #     st.insertMultipleStocks(l)
 
-
-inizialize(5432)
+    # inizialize(5432)
