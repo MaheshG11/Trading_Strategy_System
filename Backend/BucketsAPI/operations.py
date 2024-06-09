@@ -2,6 +2,8 @@ from connectDatabase import connectDatabase
 import psycopg2
 import pandas as pd
 from datetime import datetime, timedelta, timezone
+import pickle
+import os
 
 
 class databaseQueries:
@@ -137,7 +139,7 @@ class databaseQueries:
             symbols.append(i[0])
         return symbols
 
-    def getStocksDataFrame(self, exchange, delta, backTestDays=504):
+    def getStocksDataFrame(self, exchange, backTestDays=504):
         """
         Returns Dictonary of pandas dataframe
         """
@@ -149,9 +151,13 @@ class databaseQueries:
                 exchange,
                 symbol,
                 currentTime=currentTime,
-                delta=delta,
                 backTestDays=backTestDays,
             )
+        fileName = str((datetime.now()).date()) + ".pickle"
+        with open(os.path.join("output/", fileName), "wb") as f:
+            pickle.dump(stocksDict, f)
+            f.close()
+        return fileName
 
 
 if __name__ == "__main__":

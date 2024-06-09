@@ -1,10 +1,20 @@
 # IMPORTS
-from fastapi import FastAPI
+from fastapi import (
+    FastAPI,
+    Path,
+    File,
+    UploadFile,
+    BackgroundTasks,
+    HTTPException,
+    status,
+)
 import uvicorn
 import os
 from fastapi.middleware.cors import CORSMiddleware
 from dotenv import load_dotenv
 from dataRetrival import stockRetrivals
+from datetime import datetime
+from FunctionsAsAsync import *
 
 load_dotenv()
 # SETUP CONFIGURATION
@@ -26,22 +36,6 @@ app.add_middleware(
 stockretrivals = stockRetrivals()
 
 
-# @app.post("/signUp")
-# async def signup(data: signUpDetails):
-
-#     try:
-#         data = await userOperation.signUp(
-#             userscollection=userscollection,
-#             username=data.username,
-#             name=data.name,
-#             email=data.email,
-#             password=data.password,
-#         )
-#     except Exception as e:
-#         print(e)
-#     return {"message": data}
-
-
 @app.get("/getExchanges")
 async def getExchanges():
     try:
@@ -50,6 +44,31 @@ async def getExchanges():
         print(e)
         return {"Error": e}
     return data
+
+
+@app.get("/stocksData")
+async def getStocksData(exchnage: str, backgroundTasks: BackgroundTasks):
+    file = os.path.join("output/", str((datetime.now()).date()) + ".pickle")
+    if os.path.isfile(file):
+        data = await readFile(filePath=file)
+        return data
+    else:
+        backgroundTasks.add_task(stockretrivals.getStocksData, exchange=exchnage)
+        return "We are working on it please request data after a few minutes"
+
+
+@app.post("/generateReport")
+async def generateReport(file: UploadFile = File(...)):
+    backgroundTasks: BackgroundTasks
+    backgroundTasks.add_task(
+        generateReport,
+    )
+    file = os.path.join("output/", str((datetime.now()).date()) + ".pickle")
+    os.path.isfile(file)
+    contents = await file.read()
+    print(contents.decode("utf-8"))
+
+    return "We are yet to work on it. When we do go to reports section and you will find your report there"
 
 
 if __name__ == "__main__":
