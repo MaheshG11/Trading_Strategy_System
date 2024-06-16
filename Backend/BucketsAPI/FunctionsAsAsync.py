@@ -3,8 +3,13 @@ import pickle
 
 
 async def readFile(filePath):
-    with open(os.path.join("output/", filePath), "rb") as f:
-        data = pickle.load(f)
+    with open(filePath, "rb") as f:
+        data = f.read()
         f.close()
     print(data)
     return data
+
+
+async def generateReport_(contents):
+
+    return "None"

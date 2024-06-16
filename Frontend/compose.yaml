@@ -1,12 +1,12 @@
 services:
     frontend:
-      build: .
-      # image: frontend:latest
-      container_name: frontendContainer1
-      # command: sh -c "npm run dev"
+      build: 
+        context: .
+        dockerfile: dockerfile
+      command: 'npm run dev '
       ports:
-        - 3000:3000  # machine:container
-      volumes:
-        - ./:/app  # machine:container
-        - 
-      # restart: always
+        - '127.0.0.1:3002:3002'
+
+networks:
+  mynet:
+  

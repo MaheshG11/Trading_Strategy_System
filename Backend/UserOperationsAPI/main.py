@@ -7,6 +7,7 @@ import pymongo
 import os
 from fastapi.middleware.cors import CORSMiddleware
 from dotenv import load_dotenv
+import jwt
 
 load_dotenv()
 # SETUP CONFIGURATION
@@ -31,6 +32,7 @@ print(type(userscollection))
 async def signup(data: signUpDetails):
 
     try:
+        print(data)
         data = await userOperation.signUp(
             userscollection=userscollection,
             username=data.username,
@@ -49,9 +51,22 @@ async def login(data: loginDetails):
         data = await userOperation.login(
             userscollection=userscollection, email=data.email, password=data.password
         )
+
     except Exception as e:
         return {"error": e}
     return data
+
+
+@app.get("/id")
+async def id(data: idDetails):
+    try:
+
+        response = await userOperation.verifyJWT(token=data.token)
+
+        return response
+    except Exception as e:
+        print(e)
+        return {"error": e}
 
 
 if __name__ == "__main__":

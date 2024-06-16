@@ -16,14 +16,10 @@ class stockRetrivals(databaseQueries):
 
         return {"status": 200, "data": data}
 
-    def getStocksData(self, exchange: str):
-        filename = self.getStocksDataFrame(exchange=exchange, backTestDays=2520)
-        yesterday = str((datetime.now() - timedelta(1)).date()) + ".pickle"
-        try:
-            yesterdays_file = os.path.join("output", yesterday)
-            os.remove(yesterdays_file)
-        except Exception as e:
-            return
+    async def getStockData(self, exchange, stock):
+        data = self.stockData(exchange=exchange, stock=stock)
+
+        return {"status": 200, "data": data}
 
 
 if __name__ == "__main__":

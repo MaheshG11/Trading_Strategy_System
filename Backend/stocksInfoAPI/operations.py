@@ -18,11 +18,9 @@ class databaseQueries:
         cur = None
         if dbName not in self.dbs:
             try:
-
                 self.dbs[dbName] = connectDatabase.connect(dbName)
                 cur = self.dbs[dbName].cursor()
                 self.cur[dbName] = cur
-
             except Exception as e:
                 print(e)
                 return e
@@ -158,7 +156,28 @@ class databaseQueries:
             f.close()
         return fileName
 
+    def stockData(self, exchange: str, stock: str):
+        stock = "_".join(stock.split("."))
+        cur = self.getCursor(exchange.lower())
+        query = f"""SELECT date,close from {stock.lower()};"""
+        cur.execute(query)
+        data = []
+
+        for line in cur:
+            data.append([str(line[0].date()), float(line[1])])
+
+        return {"status": 200, "Daily": data}
+
+    async def stocks(self, exchange, ch):
+        try:
+            exchange = "_".join(exchange.split("."))
+            cur = self.getCursor("masterdb")
+            query = f"""SELECT symbol FROM {exchange} WHERE symbol LIKE '{ch}%';"""
+            cur.execute(query)
+            return cur.fetchall()
+        except:
+            return "None"
+
 
 if __name__ == "__main__":
     a = databaseQueries()
-    a.getStocksDataFrame("bse", 10)

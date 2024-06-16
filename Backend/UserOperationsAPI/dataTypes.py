@@ -11,3 +11,7 @@ class signUpDetails(BaseModel):
 class loginDetails(BaseModel):
     password: str
     email: str
+
+
+class idDetails(BaseModel):
+    token: str
